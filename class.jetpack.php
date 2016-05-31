@@ -2304,7 +2304,7 @@ class Jetpack {
 
 		Jetpack::catch_errors( true );
 		ob_start();
-		require Jetpack::get_module_path( $module );
+		require_once Jetpack::get_module_path( $module );
 		/** This action is documented in class.jetpack.php */
 		do_action( 'jetpack_activate_module', $module );
 		$active[] = $module;

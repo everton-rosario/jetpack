@@ -215,6 +215,19 @@ export const ActionNotices = React.createClass( {
 					</div>
 				);
 
+			case 'module_activate_failure' :
+				return (
+					<div>
+						<SimpleNotice status="is-error">
+							{ __( 'Could not activate the feature' ) }
+							<br />
+							{
+								__( 'This feature requires your site to be publicly accessible.' )
+							}
+						</SimpleNotice>
+					</div>
+				);
+
 			default:
 				return false;
 		}

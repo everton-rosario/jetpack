@@ -10,6 +10,7 @@ import assign from 'lodash/assign';
  * Internal dependencies
  */
 import {
+	JETPACK_MODULE_ACTIVATE_FAIL,
 	JETPACK_NOTICES_DISMISS,
 	JETPACK_NOTICES_DISMISS_FAIL,
 	JETPACK_NOTICES_DISMISS_SUCCESS,
@@ -30,6 +31,9 @@ const status = ( state = false , action ) => {
 
 		case JUMPSTART_SKIP:
 			return 'new_connection_no_jumpstart';
+
+		case JETPACK_MODULE_ACTIVATE_FAIL:
+			return 'module_activate_failure';
 
 		default:
 			return state;
